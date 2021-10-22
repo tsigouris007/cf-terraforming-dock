@@ -17,6 +17,15 @@ to be able to adopt Terraform by giving them a feasible way to get
 all of their existing Cloudflare configuration into Terraform.
 ```
 
+## Example usages
+```bash
+~$ docker run -it --rm cf-terraforming:master generate -t "YOUR_TOKEN" --resource-type "RESOURCE_NAME"
+~$ docker run -it --rm cf-terraforming:master generate -e "YOUR_EMAIL" -a "YOUR_ACCOUNT_ID" --resource-type "RESOURCE_NAME"
+```
+
+## Resources
+You can find these here: https://github.com/cloudflare/cf-terraforming#supported-resources
+
 ## CloudFlare Terraforming arguments
 ```
 Usage:
