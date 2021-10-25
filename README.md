@@ -2,6 +2,10 @@
 
 Original idea from repo: https://github.com/cloudflare/cf-terraforming
 
+## IMPORTANT
+You must init and install locally the CloudFlare terraform provider in order for this to work.\
+CloudFlare provider: https://registry.terraform.io/providers/cloudflare/cloudflare/latest
+
 ## Build locally
 Run inside your cloned repository:
 ```bash
