@@ -2,10 +2,12 @@
 
 Original idea from repo: https://github.com/cloudflare/cf-terraforming
 
-## IMPORTANT
+## Important
 You must init and install locally the CloudFlare terraform provider in order for this to work.\
-CloudFlare provider: https://registry.terraform.io/providers/cloudflare/cloudflare/latest
+CloudFlare provider: https://registry.terraform.io/providers/cloudflare/cloudflare/latest \
 
+## Update
+The image has been modified to automatically download and install terraform v1.0.9 and perform init with a simple `provider.tf` file that uses CloudFlare provider.
 ## Build locally
 Run inside your cloned repository:
 ```bash
@@ -23,8 +25,8 @@ all of their existing Cloudflare configuration into Terraform.
 
 ## Example usages
 ```bash
-~$ docker run -it --rm cf-terraforming:master generate -t "YOUR_TOKEN" --resource-type "RESOURCE_NAME"
-~$ docker run -it --rm cf-terraforming:master generate -e "YOUR_EMAIL" -a "YOUR_ACCOUNT_ID" --resource-type "RESOURCE_NAME"
+~$ docker run -it --rm cf-terraforming:master generate -t "YOUR_TOKEN" --resource-type "RESOURCE_NAME" -z "YOUR_ZONE_ID"
+~$ docker run -it --rm cf-terraforming:master generate -e "YOUR_EMAIL" -a "YOUR_ACCOUNT_ID" --resource-type "RESOURCE_NAME" -z "YOUR_ZONE_ID"
 ```
 
 ## Resources
